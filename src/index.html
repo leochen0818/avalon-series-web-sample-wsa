@@ -1,23 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>阿瓦隆</title>
-  <link rel="stylesheet" href="./assets/css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>阿瓦隆</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <!-- 原則：能用相對來說較少的 HTML 元素、相對來說較正確 HTML 元素類型排  -->
+    <!-- 比較奇怪的方式： 用 "<br />" "<hr>" -->
+    <!-- 原因：不好控制 -->
+    <!-- 無腦 div -->
+    <!-- HTML 標籤元素是有語意，對 "SEO" 有利、對於讀起來、A11Y -->
 
-</head>
-<body>
-  <div class="card invisible">
-    <div class="front">正面</div>
-    <div class="back">背面</div>
-  </div>
-</body>
+    <!-- <div class="container">
+    <div class="child-component bbb"></div>
+    <div class="child-component aaa"></div>
+  </div> -->
 
-<script>
-  document.querySelector(".card").addEventListener('click', function (){
-    this.classList.toggle('invisible');
-  });
-</script>
+    <div class="main-container">
+      <header>
+        <button id="toggle-operation-area" type="button">
+          Toggle operation-area
+        </button>
+      </header>
+      <main>
+        <!-- <div class="card invisible">
+          <div class="front">正面</div>
+          <div class="back">背面</div>
+        </div> -->
+
+        <div class="main-wrapper">
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+
+          <div class="item-container">
+            <p class="label">1號 玩家ID</p>
+            <p class="action-btn-area">
+              <button>踢出</button>
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="operation-area-container"></div>
+  </body>
+
+  <script>
+    // document.querySelector(".card").addEventListener("click", function () {
+    //   this.classList.toggle("invisible");
+    // });
+    document
+      .querySelector("#toggle-operation-area")
+      .addEventListener("click", function () {
+        document.body.classList.toggle("show-operation-area");
+      });
+  </script>
 </html>
